@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 
 public class Board extends JPanel
 {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; //ensures consistency across different java compilers
 
     private Minesweeper mine;
     private Cell[][] cells;
