@@ -64,7 +64,15 @@ public class Board extends JPanel
                     g.fillRect(i * 20,j * 20, i * 20 + 20, j * 20 + 20);
                     g.setColor(Color.BLACK);
                 }
-
+                /*
+                Numbers here represent a "line" position on clock like style
+                  2
+                1   3
+                  4
+                5   6
+                  7
+                 Just like this
+                 */
                 if (!current.isCovered())
                 {
                     if (current.getNumber() == 1)
