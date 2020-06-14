@@ -144,6 +144,7 @@ public class Minesweeper extends JFrame
 
     /**
      * Self-explanatory
+     * Just generates mines (anew)
      */
     public void reset()
     {
@@ -186,7 +187,7 @@ public class Minesweeper extends JFrame
     }
 
     /**
-     * Winning conditions and announcement
+     * Winning announcements
      */
     private void win()
     {
@@ -207,7 +208,7 @@ public class Minesweeper extends JFrame
     }
 
     /**
-     * Losing conditions and announcement
+     * Losing announcements
      */
     private void lose()
     {
@@ -228,7 +229,7 @@ public class Minesweeper extends JFrame
     }
 
     /**
-     * Checks if wining conditions are met
+     * Checks if wining conditions have been met
      * @return
      */
     private boolean won()

@@ -14,7 +14,7 @@ public class Main
      * @param y
      * @return
      */
-    static int intErrorCatch (int x, int y) //it kind of works?
+    static int intErrorCatch (int x, int y) //kind of works
     {
         int max, min;
 
