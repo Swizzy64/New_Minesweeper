@@ -198,7 +198,7 @@ public class Minesweeper extends JFrame
             }
         }
         refresh();
-        JOptionPane.showMessageDialog(null, "GAME OVER.");
+        JOptionPane.showMessageDialog(null, "GAME OVER!");
         reset();
     }
 
@@ -233,7 +233,7 @@ public class Minesweeper extends JFrame
         reset = new JButton("Reset"); //Reset button
 
         add(board, BorderLayout.CENTER); //Put board in the center
-        add(reset, BorderLayout.SOUTH); //IT'S A BUTTON! AND IT WORKS! VERY COOL
+        add(reset, BorderLayout.NORTH); //IT'S A BUTTON! AND IT WORKS! VERY COOL
 
         reset.addActionListener(new Actions(this)); //ActionListener to watch for mouse actions
 
