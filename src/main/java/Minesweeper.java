@@ -4,9 +4,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- *
- */
 public class Minesweeper extends JFrame
 {
     private static final long serialVersionUID = 1L;
