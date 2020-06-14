@@ -4,6 +4,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+/**
+ *
+ */
 public class Minesweeper extends JFrame
 {
     private static final long serialVersionUID = 1L;
@@ -14,6 +17,11 @@ public class Minesweeper extends JFrame
     private JButton reset;
     private boolean finished;
 
+    /**
+     * Registers user action
+     * @param x
+     * @param y
+     */
     public void select(int x, int y)
     {
         if(cells[x][y].isFlagged())
@@ -32,6 +40,9 @@ public class Minesweeper extends JFrame
         }
     }
 
+    /**
+     * Add hazard level to cells
+     */
     private void setNumbers()
     {
         for (int i = 0; i < width; i++)
@@ -104,6 +115,11 @@ public class Minesweeper extends JFrame
         }
     }
 
+    /**
+     * Marks a cell with a flag
+     * @param x
+     * @param y
+     */
     public void mark(int x, int y)
     {
         if(cells[x][y].isFlagged())
@@ -114,6 +130,9 @@ public class Minesweeper extends JFrame
         resetMarks();
     }
 
+    /**
+     * Self-explanatory
+     */
     private void resetMarks()
     {
         for(int i = 0; i < width; i++)
@@ -126,6 +145,9 @@ public class Minesweeper extends JFrame
         }
     }
 
+    /**
+     * Self-explanatory
+     */
     public void reset()
     {
         Random random = new Random();
@@ -166,6 +188,9 @@ public class Minesweeper extends JFrame
         board.repaint();
     }
 
+    /**
+     * Winning conditions and announcement
+     */
     private void win()
     {
         finished = true;
@@ -184,6 +209,9 @@ public class Minesweeper extends JFrame
         reset();
     }
 
+    /**
+     * Losing conditions and announcement
+     */
     private void lose()
     {
         finished = true;
@@ -202,6 +230,10 @@ public class Minesweeper extends JFrame
         reset();
     }
 
+    /**
+     * Checks if wining conditions are met
+     * @return
+     */
     private boolean won()
     {
         for(int i = 0; i < width; i++)
@@ -220,12 +252,20 @@ public class Minesweeper extends JFrame
         return finished;
     }
 
+    /**
+     * Fun part - adds option to customize height, width and difficulty
+     * makes board, places it on screen, allows it to react to clicks
+     * A very good thing, essential tbh
+     * @param w
+     * @param h
+     * @param d
+     */
     public Minesweeper(int w, int h, int d)
     {
         width = w; //Width of the board
         height = h; //Height of the board
         difficulty = d; //Percentage of mines in the board
-        cells = new Cell[width][height];
+        cells = new Cell[width][height]; //add user-specified number of cells
 
         reset(); //Set mines on the board
 
@@ -233,13 +273,13 @@ public class Minesweeper extends JFrame
         reset = new JButton("Reset"); //Reset button
 
         add(board, BorderLayout.CENTER); //Put board in the center
-        add(reset, BorderLayout.NORTH); //IT'S A BUTTON! AND IT WORKS! VERY COOL
+        add(reset, BorderLayout.NORTH); //IT'S A BUTTON! AND IT WORKS!
 
         reset.addActionListener(new Actions(this)); //ActionListener to watch for mouse actions
 
-        setTitle("Minesweeper");
+        setTitle("New_Minesweeper");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+        setResizable(false); //constant size
         pack();
         setVisible(true);
     }

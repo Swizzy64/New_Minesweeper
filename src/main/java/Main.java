@@ -2,11 +2,18 @@ import java.util.Scanner;
 
 public class Main
 {
+    //forcefully avoiding hard coded numbers
     private static final int min_value = 1;
     private static final int max_width = 60;
     private static final int max_height = 30;
     private static final int max_difficulty = 100;
 
+    /**
+     * Takes user input and verifies if it is correct
+     * @param x
+     * @param y
+     * @return
+     */
     static int intErrorCatch (int x, int y) //it kind of works?
     {
         int max, min;

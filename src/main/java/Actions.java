@@ -27,15 +27,15 @@ public class Actions implements ActionListener, MouseListener
     {
         if (e.getButton() == 1)//left click
         {
-            int x = e.getX() / 20;
-            int y = e.getY() / 20;
+            int x = e.getX() / Board.size;
+            int y = e.getY() / Board.size;
 
             mine.select(x, y);
         }
         if (e.getButton() == 3)//right click
         {
-            int x = e.getX() / 20;
-            int y = e.getY() / 20;
+            int x = e.getX() / Board.size;
+            int y = e.getY() / Board.size;
 
             mine.mark(x, y);
         }
